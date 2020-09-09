@@ -25,8 +25,8 @@ export class ListarComponent implements OnInit {
   }
 
   Detallar(subcategoria: Subcategoria) {
-    localStorage.setItem("cod", subcategoria.cod_sub_categoria.toString());
-    this.router.navigate(["details"])
+    localStorage.setItem("cod", subcategoria.COD_SUB_CATEGORIA.toString());
+    this.router.navigate(["details"]);
   }
 
   Delete(subcategoria: Subcategoria) {

@@ -14,14 +14,14 @@ export class DetallesComponent implements OnInit {
   constructor(private router: Router, private subcategoriaService: SubCategoriaService) { }
 
   ngOnInit(): void {
-    //this.Mostrar();
+    this.Mostrar();
   }
 
-  // Mostrar(){
-  //   let cod = localStorage.getItem("cod");
-  //   this.subcategoriaService.getSubcategoria(+cod).subscribe(data => {
-  //     this.subcategoria = data;
-  //   })
-  // }
+  Mostrar(){
+    let cod = localStorage.getItem("cod");
+    this.subcategoriaService.getBySub(cod).subscribe(data => {
+      this.subcategoria = data;
+    })
+  }
 
 }

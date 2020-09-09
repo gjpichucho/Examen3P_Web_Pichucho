@@ -18,7 +18,7 @@
                     <tr *ngFor="let sucate of subcategorias" class="text-center">
                         <td>{{sucate.COD_SUB_CATEGORIA}}</td>
                         <td>{{sucate.NOMBRE}}</td>
-                        <td>{{sucate.FECHA_CREACION}}</td>
+                        <td>{{sucate.FECHA_CREACION | date:'yyyy-MM-dd'}}</td>
                         <!-- <td>{{empleado.fecha_nacimiento | date:'yyyy-MM-dd'}}</td> -->
                         <td>
                             <button (click)="Detallar(sucate)" class="btn btn-warning">Detalles</button>

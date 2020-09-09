@@ -9,25 +9,25 @@
             <form action="">
                 <div class="form-group">
                     <label for="">Codigo Subcategoria:</label>
-                    <input [(ngModel)]="subcategoria.cod_sub_categoria" name="cedula" type="text"  class="form-control" maxlength="10" >
+                    <input [(ngModel)]="subcategoria.COD_SUB_CATEGORIA" name="cedula" type="text"  class="form-control" maxlength="10" >
                 </div>
                 <div class="form-group">
                     <label for="">Codigo Categoria:</label>
-                    <input [(ngModel)]="subcategoria.cod_categoria" name="name" type="text" class="form-control">
+                    <input [(ngModel)]="subcategoria.COD_CATEGORIA" name="name" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="">Nombre:</label>
-                    <input [(ngModel)]="subcategoria.nombre" name="apellidos" type="text" class="form-control">
+                    <input [(ngModel)]="subcategoria.NOMBRE" name="apellidos" type="text" class="form-control">
                 </div>
                 
                 <div class="form-group">
                     <label for="">DEscripcion:</label>
-                    <input [(ngModel)]="subcategoria.descripcion" name="salario" type="text" min="0" step="any" class="form-control">
+                    <input [(ngModel)]="subcategoria.DESCRIPCION" name="salario" type="text" min="0" step="any" class="form-control">
                 </div>
                
                 <div class="form-group">
                     <label for="">Fevha de Creacion:</label>
-                    <input [ngModel]="subcategoria.fecha_creacion | date:'yyyy-MM-dd'" name="fechaNacimiento" type="date" class="form-control">
+                    <input [ngModel]="subcategoria.FECHA_CREACION | date:'yyyy-MM-dd'" name="fechaNacimiento" type="text" class="form-control">
                 </div>
                 <!-- <button (click)="Guardar()" class="btn btn-danger">Guardar</button> -->
             </form>
