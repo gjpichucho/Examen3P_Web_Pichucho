@@ -29,4 +29,11 @@ export class ListarComponent implements OnInit {
     this.router.navigate(["details"])
   }
 
+  Delete(subcategoria: Subcategoria) {
+    this.subcategoriaService.delete(subcategoria).subscribe(data => {
+      this.subcategorias = this.subcategorias.filter(p=>p!==subcategoria);
+      //alert("empleado eliminado");
+    })
+  }
+
 }

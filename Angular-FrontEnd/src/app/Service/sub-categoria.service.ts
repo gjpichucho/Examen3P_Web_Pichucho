@@ -25,6 +25,10 @@ export class SubCategoriaService {
     return this.http.get<Subcategoria>(this.Url + "/sub/" + cod);
   }
 
+  delete(sub:Subcategoria){
+    return this.http.delete<Subcategoria>(this.Url+"/"+sub.COD_SUB_CATEGORIA)
+  }
+
 
 
 }

@@ -71,5 +71,23 @@ Subcategoria.findBySub = (subCategoriaCod, result) => {
     });
 };
 
+Subcategoria.remove = (cod, result) => {
+    sql.query("DELETE FROM SUBCATEGORIA WHERE COD_SUB_CATEGORIA = ?", cod, (err, res) => {
+        if (err) {
+            console.log("error: ", err);
+            result(null, err);
+            return;
+        }
+
+        if (res.affectedRows == 0) {
+            result({ kind: "not_found" }, null);
+            return;
+        }
+
+        console.log("deleted employee with cod: ", cod);
+        result(null, res);
+    });
+};
+
 
 module.exports = Subcategoria;

@@ -78,3 +78,19 @@ exports.findOne1 = (req, res) => {
         }
     });
 };
+
+exports.delete = (req, res) => {
+    Subcategoria.remove(req.params.subCod, (err, data) => {
+        if (err) {
+            if (err.kind === "not_found") {
+                res.status(404).send({
+                    message: `Not found Employee with id ${req.params.subCod}.`
+                });
+            } else {
+                res.status(500).send({
+                    message: "Could not delete Employee with id " + req.params.subCod
+                });
+            }
+        } else res.send({ message: `subcategoria was deleted successfully!` });
+    });
+};

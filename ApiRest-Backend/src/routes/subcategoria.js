@@ -14,6 +14,6 @@ module.exports = app => {
     // app.put("/empleados/:employeeId", employeers.update);
 
 
-    // app.delete("/empleados/:EmployeeId", employeers.delete);
+     app.delete("/subcategoria/:subCod", subcategoria.delete);
 
 };
