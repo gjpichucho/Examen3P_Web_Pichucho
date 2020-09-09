@@ -28,6 +28,8 @@ app.get('/', (req, res) => {
 
 //app.use('/empleados',require('./routes/employees'));
 require("./routes/employees.js")(app);
+require("./routes/categoria.js")(app);
+require("./routes/subcategoria.js")(app);
 
 // staring the server
 app.listen(app.get('port'),()=>{
